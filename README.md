@@ -61,6 +61,17 @@ Docker Hub镜像：
 docker run -it -p 3001:3001 -v ./config:/config --device /dev/dri:/dev/dri nickrunning/wechat-selkies:latest
 ```
 
+阿里云源镜像（推荐）：
+
+```
+docker run -it -dp 3001:3001 -v ./config:/config --device /dev/dri:/dev/dri registry.cn-hangzhou.aliyuncs.com/aaas-images/wechat-selkies
+```
+
+wsl
+```
+docker run -it -dp 3001:3001 -v ./config:/config --device /dev/dxg:/dev/dri registry.cn-hangzhou.aliyuncs.com/aaas-images/wechat-selkies
+```
+
 2. **访问微信**
    
    在浏览器中访问：`https://localhost:3001` 或 `https://<服务器IP>:3001`
@@ -168,6 +179,9 @@ docker run -it -p 3001:3001 -v ./config:/config --device /dev/dri:/dev/dri nickr
 devices:
   - /dev/dri:/dev/dri
 ```
+
+WSL中应该为
+ - /dev/dxg:/dev/dri
 
 ## 目录结构
 

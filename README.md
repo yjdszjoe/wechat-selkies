@@ -69,7 +69,7 @@ docker run -it -dp 3001:3001 -v ./config:/config --device /dev/dri:/dev/dri regi
 
 wsl
 ```
-docker run -it -dp 3001:3001 -v ./config:/config --device /dev/dxg:/dev/dri registry.cn-hangzhou.aliyuncs.com/aaas-images/wechat-selkies
+docker run -it -dp 3001:3001 -v ./config:/config --device /dev/dxg --group-add video registry.cn-hangzhou.aliyuncs.com/aaas-images/wechat-selkies
 ```
 
 2. **访问微信**
